@@ -1,0 +1,23 @@
+$large-margin: 5vmax;
+$medium-margin: 2.5vmax;
+$small-margin: 1.25vmax;
+
+.u_large_margin_top {
+  margin-top: $large-margin;
+}
+.u_medium_margin_top {
+  margin-top: $medium-margin;
+}
+.u_small_margin_top {
+  margin-top: $small-margin;
+}
+
+.u_large_margin_bottom {
+  margin-bottom: $large-margin;
+}
+.u_medium_margin_bottom {
+  margin-bottom: $medium-margin;
+}
+.u_small_margin_bottom {
+  margin-bottom: $small-margin;
+}

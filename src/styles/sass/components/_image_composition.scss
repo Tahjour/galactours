@@ -1,0 +1,40 @@
+.images_composition_box {
+  position: relative;
+  width: 100%;
+  padding: 2.5rem;
+
+  .composition_image {
+    width: 50%;
+    height: auto;
+    box-shadow: 0 0.9375vmax 2.5vmax var(--color-L0-T90);
+    border-radius: 0.3125rem;
+    position: relative;
+    cursor: pointer;
+    // outline-offset: 1.25rem;
+    transition: var(--transition-all-fast);
+
+    &.image_1 {
+      // top: -1.25rem;
+      left: 0;
+    }
+    &.image_2 {
+      right: 10%;
+      top: 5%;
+    }
+    &.image_3 {
+      left: 20%;
+      top: -30%;
+    }
+
+    &:hover {
+      outline: 0.9375rem solid var(--dim-pink);
+      transform: scale(1.1);
+      box-shadow: 0 1.5625rem 2.5rem var(--color-L0-T50);
+      z-index: 20;
+    }
+
+    &:not(:hover) {
+      transform: scale(0.9);
+    }
+  }
+}

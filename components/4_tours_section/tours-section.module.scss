@@ -1,0 +1,19 @@
+@import "sass/components/_tour_card";
+@import "sass/base/_typography";
+@import "sass/abstracts/_utilities";
+
+.tours_section {
+  padding: 3.125rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .tours_section_grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 0 2.5rem;
+  }
+}

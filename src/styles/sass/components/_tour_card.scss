@@ -1,0 +1,142 @@
+@import "sass/components/_button";
+$tour-card-height: 33vmax;
+
+.tour_card {
+  perspective: 93.75rem;
+  position: relative;
+  height: $tour-card-height;
+  cursor: pointer;
+
+  &_side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0.625vmax;
+    padding: 1.25vmax;
+    height: inherit;
+    box-shadow: 0 0.3125rem 1rem var(--color-L0-T50);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: var(--transition-all-slow-ease);
+
+    &_front {
+      background-color: var(--color-L15);
+    }
+
+    &_back {
+      //   background-color: var(--light-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotateY(180deg);
+
+      &_card1 {
+        background-image: linear-gradient(to right bottom, var(--light-blue), var(--medium-blue));
+      }
+      &_card2 {
+        background-image: linear-gradient(to right bottom, var(--light-purple), var(--dark-purple));
+      }
+      &_card3 {
+        background-image: linear-gradient(to right bottom, var(--light-red), var(--dark-red));
+      }
+    }
+  }
+
+  &:hover &_side_front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &_side_back {
+    transform: rotateY(0deg);
+  }
+
+  &_image_box {
+    background-size: cover;
+    height: 15vmax;
+    // background-blend-mode: hue;
+    border-radius: inherit;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &_1 {
+      background-image: url(/images/blue-planet1.jpg);
+    }
+    &_2 {
+      background-image: url(/images/purple-planets.jpg);
+    }
+    &_3 {
+      background-image: url(/images/red-planets.jpg);
+    }
+  }
+
+  &_heading {
+    font-size: 1.3vmax;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-L100);
+    position: absolute;
+    top: 13vmax;
+    right: 1.25rem;
+    text-align: right;
+  }
+  &_heading_span {
+    border-radius: 0.625vmax;
+    padding: 0.9375vmax 1.25vmax;
+
+    &_1 {
+      background-image: linear-gradient(to right bottom, var(--light-blue), var(--medium-blue));
+    }
+    &_2 {
+      background-image: linear-gradient(to right bottom, var(--light-purple), var(--dark-purple));
+    }
+    &_3 {
+      background-image: linear-gradient(to right bottom, var(--light-red), var(--dark-red));
+    }
+  }
+
+  &_details {
+    // height: calc(100% - 34.375vmax);
+    flex-grow: 1;
+    padding: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+      list-style: none;
+      width: 80%;
+
+      li {
+        text-align: center;
+        font-size: 1vmax;
+        padding: 0.625vmax;
+
+        &:not(:last-child) {
+          border-bottom: 0.0625rem solid var(--color-L25);
+        }
+      }
+    }
+  }
+
+  // call to action part at the back of the card
+  &_back_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_price_box {
+    text-align: center;
+  }
+
+  &_price_only {
+    font-size: 1.5vmax;
+  }
+  &_price_value {
+    font-size: 4vmax;
+    font-weight: 400;
+  }
+  &_price_after_text {
+    font-size: 1vmax;
+  }
+}

@@ -1,0 +1,60 @@
+@import "sass/base/typography";
+@import "sass/components/button";
+
+.header_section {
+  height: calc(100vh - var(--body-padding));
+  background-image: linear-gradient(to right, var(--color-L10-T50), var(--color-L10-T50)),
+    url(/images/planetours-hero.jpg);
+  background-size: cover;
+  background-position: top;
+  // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &_logo_box {
+    // position: absolute;
+    // top: 2.5rem;
+    // left: 2.5rem;
+    padding: .625rem 1.25rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    height: var(--logo-header-box-height);
+
+    h1 {
+      letter-spacing: .125rem;
+      text-transform: uppercase;
+    }
+
+    &_image_box {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+
+      &_image {
+        -o-object-fit: contain;
+        object-fit: contain;
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  &_heading_box {
+    // position: absolute;
+    // top: 45%;
+    // left: 50%;
+    // transform: translateY(-50%) translateX(-50%);
+    height: calc(100% - var(--logo-header-box-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_sub_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-10%);
+    }
+  }
+}

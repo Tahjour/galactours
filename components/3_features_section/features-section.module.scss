@@ -1,0 +1,22 @@
+@import "sass/base/typography";
+@import "sass/components/_feature_box";
+
+.features_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: -15.625rem;
+  padding: 12.5rem 0;
+  background-image: linear-gradient(to right, var(--color-L0-T50), var(--color-L0-T50)),
+    url(/images/pilot-room2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  // clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+
+  .features_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

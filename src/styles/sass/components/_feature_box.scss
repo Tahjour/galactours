@@ -1,0 +1,28 @@
+.feature_box {
+  background-color: var(--color-L0-T70);
+  padding: 1.5625vmax;
+  text-align: center;
+  border-radius: 1vmax;
+  box-shadow: 0 0.9375vmax 2.5vmax var(--color-L0-T50);
+  transition: var(--transition-all-fast);
+  margin: 1.25rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-0.625rem) scale(1.05);
+  }
+
+  &_icon {
+    font-size: 3.75rem;
+    margin-bottom: 0.3125rem;
+    color: var(--dim-pink);
+    // background-color: var(--dim-pink);
+    // -webkit-text-fill-color: transparent;
+    // -webkit-background-clip: text;
+    // background-clip: text;
+  }
+  &_text{
+  font-size: 0.9375vmax;
+
+  }
+}
