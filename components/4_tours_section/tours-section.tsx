@@ -40,7 +40,7 @@ export default function ToursSection() {
                   for the experience of a lifetime
                 </p>
               </div>
-              <MainButton message="Book Now!" />
+              <MainButton message="Book Now!" location="tours_section" />
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function ToursSection() {
                   for the experience of a lifetime
                 </p>
               </div>
-              <MainButton message="Book Now!" />
+              <MainButton message="Book Now!" location="tours_section" />
             </div>
           </div>
         </div>
@@ -114,13 +114,13 @@ export default function ToursSection() {
                   for the experience of a lifetime
                 </p>
               </div>
-              <MainButton message="Book Now!" />
+              <MainButton message="Book Now!" location="tours_section" />
             </div>
           </div>
         </div>
       </div>
 
-      <MainButton message="See all tours!" location="tours_section" />
+      <MainButton message="See all tours!" location="tours_section" type_class="button_all_tours" />
     </section>
   );
 }

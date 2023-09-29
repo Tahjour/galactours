@@ -5,18 +5,25 @@ import MainButton from "../UI/main_button";
 export default function HeaderSection() {
   return (
     <header className={styles.header_section}>
-      <div className={styles.header_section_logo_box}>
+      <motion.div
+        className={styles.header_section_logo_box}
+        animate={{
+          opacity: [0, 1],
+          x: [100, 0],
+        }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
         <div className={styles.header_section_logo_box_image_box}>
           <Image
             className={styles.header_section_logo_box_image_box_image}
-            src="/images/logo-white.png"
+            src="/media/logo-white.png"
             alt="Planetours logo"
             width={50}
             height={49}
           />
         </div>
         <h1>Galactours</h1>
-      </div>
+      </motion.div>
       <div className={styles.header_section_heading_box}>
         <div className={styles.header_section_heading_box_sub_box}>
           <h1 className={styles.heading_1}>

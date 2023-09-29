@@ -1,7 +1,7 @@
 .main_button {
   position: relative;
-  font-size: 1vmax;
-  padding: 1vmax 2.5vmax;
+  font-size: 0.8vmax;
+  padding: 1vmax 1.5vmax;
   border-radius: 6.25rem;
   text-transform: uppercase;
   border: 0;
@@ -60,17 +60,18 @@
 }
 
 .link_button {
-  &:link,
-  &:visited {
-    font-size: 1vmax;
-    text-decoration: none;
-    color: var(--dim-pink);
-    display: inline-block;
-    border-bottom: 0.0625rem solid var(--dim-pink);
-    padding: 0.5vmax;
-    border-radius: 0.3125rem;
-    transition: var(--transition-all-fast);
-  }
+  position: relative;
+  font-size: 1vmax;
+  text-decoration: none;
+  color: var(--dim-pink);
+  display: inline-block;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 0.0625rem solid var(--dim-pink);
+  padding: 0.5vmax;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  transition: var(--transition-all-fast);
 
   &:hover {
     background-color: var(--dim-pink);

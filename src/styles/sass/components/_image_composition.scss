@@ -1,3 +1,4 @@
+// src\styles\sass\components\_image_composition.scss
 .images_composition_box {
   position: relative;
   width: 100%;
@@ -7,34 +8,111 @@
     width: 50%;
     height: auto;
     box-shadow: 0 0.9375vmax 2.5vmax var(--color-L0-T90);
-    border-radius: 0.3125rem;
+    border-radius: 0.3125vmax;
     position: relative;
     cursor: pointer;
-    // outline-offset: 1.25rem;
+    z-index: 1;
+    outline-offset: 0.625vmax;
     transition: var(--transition-all-fast);
 
     &.image_1 {
       // top: -1.25rem;
       left: 0;
+      transition-property: left, z-index, transform;
+      transition-duration: var(--transition-fast), 0s, var(--transition-fast);
+      transition-delay: var(--transition-fast), var(--transition-fast), 0s;
+      // It may be confusing, but the delays here are more for when the transition is moving backward, not forward.
+
+      &.active {
+        // The delays here are moving forward, not backward.
+        transition-delay: 0s, var(--transition-fast), var(--transition-fast);
+        left: -35%;
+        transform: translateX(70%) scale(1.1);
+      }
     }
     &.image_2 {
       right: 10%;
       top: 5%;
+      transition-property: right, z-index, transform;
+      transition-duration: var(--transition-fast), 0s, var(--transition-fast);
+      transition-delay: var(--transition-fast), var(--transition-fast), 0s;
+
+      &.active {
+        transition-delay: 0s, var(--transition-fast), var(--transition-fast);
+        right: -25%;
+        transform: translateX(-70%) scale(1.1);
+      }
     }
     &.image_3 {
       left: 20%;
       top: -30%;
+
+      &.active {
+        transform: scale(1.1);
+      }
     }
 
-    &:hover {
-      outline: 0.9375rem solid var(--dim-pink);
-      transform: scale(1.1);
-      box-shadow: 0 1.5625rem 2.5rem var(--color-L0-T50);
-      z-index: 20;
+    &.active {
+      outline: 0.625vmax solid var(--dim-pink);
+      box-shadow: 0 1.5625vmax 2.5vmax var(--color-L0-T50);
+      z-index: 10;
     }
 
-    &:not(:hover) {
-      transform: scale(0.9);
-    }
+    // &:hover {
+    //   transition-delay:
+    //     z-index var(--transition-fast),
+    //     transform 0s;
+    //   outline: 0.625vmax solid var(--dim-pink);
+    //   transform: translateX(-100%) scale(1.1);
+    //   // transform: scale(1.1);
+    //   box-shadow: 0 1.5625vmax 2.5vmax var(--color-L0-T50);
+    //   z-index: 20;
+    // }
+
+    // &:not(:hover) {
+    //   transform: scale(0.9);
+    // }
+  }
+}
+
+@keyframes image1Movement {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66%,
+  100% {
+    z-index: 20;
+    transform: translateX(0) scale(1.1);
+  }
+}
+
+@keyframes image2Movement {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-70%);
+  }
+  66%,
+  100% {
+    z-index: 20;
+    transform: translateX(0) scale(1.1);
+  }
+}
+
+@keyframes image3Movement {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66%,
+  100% {
+    z-index: 20;
+    transform: translateX(0) scale(1.1);
   }
 }

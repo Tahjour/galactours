@@ -1,7 +1,40 @@
+// components\2_about_section\about-section.tsx
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./about_section.module.scss";
+import { useEffect, useState } from "react";
 export default function AboutSection() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [activeImage, setActiveImage] = useState<number | null>(null);
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+    if (!isHovered) {
+      timeout = setTimeout(() => {
+        setActiveImage(null);
+      }, 1000);
+    }
+    return () => {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+    };
+  }, [activeImage, isHovered]);
+
+  const handleClick = (imageNumber: number) => {
+    setActiveImage(imageNumber);
+  };
+
+  const handleMouseEnter = (imageNumber: number) => {
+    setIsHovered(true);
+    setActiveImage(imageNumber);
+  };
+
+  const handleMouseLeave = () => {
+    console.log("Mouse left");
+    setIsHovered(false);
+  };
+
   return (
     <section className={styles.about_section}>
       <h2 className={styles.heading_2} style={{ marginBottom: "2rem" }}>
@@ -23,31 +56,44 @@ export default function AboutSection() {
             rivers.
           </p>
 
-          <Link href={"#"} className={styles.link_button}>
-            Learn more &rarr;
-          </Link>
+          <button className={styles.link_button}>Learn more &rarr;</button>
         </div>
         <div className={styles.images_composition_box}>
           <Image
-            className={`${styles.composition_image} ${styles.image_1}`}
-            src="/images/massive-spaceship.jpg"
+            className={`${styles.composition_image} ${styles.image_1} ${
+              activeImage === 1 ? styles.active : ""
+            }`}
+            src="/media/massive-spaceship.jpg"
             alt="Image of light speed travel"
             width={1152}
             height={768}
+            onClick={() => handleClick(1)}
+            onMouseEnter={() => handleMouseEnter(1)}
+            onMouseLeave={handleMouseLeave}
           />
           <Image
-            className={`${styles.composition_image} ${styles.image_2}`}
-            src="/images/cluster-of-planets1.jpg"
+            className={`${styles.composition_image} ${styles.image_2} ${
+              activeImage === 2 ? styles.active : ""
+            }`}
+            src="/media/cluster-of-planets1.jpg"
             alt="A cluster of planets"
             width={1152}
             height={768}
+            onClick={() => handleClick(2)}
+            onMouseEnter={() => handleMouseEnter(2)}
+            onMouseLeave={handleMouseLeave}
           />
           <Image
-            className={`${styles.composition_image} ${styles.image_3}`}
-            src="/images/alien-cliff-view.jpg"
+            className={`${styles.composition_image} ${styles.image_3} ${
+              activeImage === 3 ? styles.active : ""
+            }`}
+            src="/media/alien-cliff-view.jpg"
             alt="A view off an alien cliff"
             width={1152}
             height={768}
+            onClick={() => handleClick(3)}
+            onMouseEnter={() => handleMouseEnter(3)}
+            onMouseLeave={handleMouseLeave}
           />
         </div>
       </div>

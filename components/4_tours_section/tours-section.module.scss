@@ -1,9 +1,10 @@
+// components\4_tours_section\tours-section.module.scss
 @import "sass/components/_tour_card";
 @import "sass/base/_typography";
 @import "sass/abstracts/_utilities";
 
 .tours_section {
-  padding: 3.125rem 0;
+  padding: 3.125vmax 0;
   display: flex;
   flex-direction: column;
   align-items: center;

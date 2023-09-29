@@ -1,0 +1,35 @@
+.form {
+  &_group:not(:last-child) {
+    margin-bottom: 1.5vmax;
+  }
+
+  &_input {
+    font-size: 1vmax;
+    font-family: inherit;
+    padding: 1vmax 1.5vmax;
+    border-radius: 0.625vmax;
+    background-color: var(--color-L25-T50);
+    border: 0;
+    border-bottom: 0.1875vmax solid transparent;
+    width: 90%;
+    display: block;
+    color: var(--color-L100);
+
+    &::-webkit-input-placeholder {
+      color: var(--color-L50);
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 1vmax 2vmax var(--color-L0-T20);
+      border-bottom: 0.1875vmax solid var(--light-blue);
+    }
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: var(--color-L100);
+      box-shadow: 0 0 0 62.5rem var(--color-L25) inset;
+      caret-color: var(--color-L100);
+      /* Above is a hack to stop the background color from when the user autofills saved input */
+    }
+  }
+}

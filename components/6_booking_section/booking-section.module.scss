@@ -1,0 +1,26 @@
+@import "sass/base/_typography";
+@import "sass/components/_form";
+.booking_section {
+  padding: 9.375vmax;
+  background-image: linear-gradient(to right bottom, var(--dim-pink), var(--dim-red));
+
+  .booking_card {
+    background-image: linear-gradient(
+        105deg,
+        var(--color-L0-T90) 0%,
+        var(--color-L0-T90) 50%,
+        transparent 50%
+      ),
+      url(/media/alien-river.jpg);
+    background-size: cover;
+    border-radius: 0.625vmax;
+    // background-position: center;
+    height: 31.25vmax;
+
+
+    .booking_card_form_box {
+        width: 50%;
+        padding: 3.75vmax;
+    }
+  }
+}

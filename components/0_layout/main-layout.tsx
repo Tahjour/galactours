@@ -8,6 +8,8 @@ const lato = Lato({
 });
 import styles from "./main-layout.module.scss";
 import ToursSection from "../4_tours_section/tours-section";
+import StoriesSection from "../5_stories_section/stories-section";
+import BookingSection from "../6_booking_section/booking-section";
 
 export default function MainLayout() {
   return (
@@ -16,6 +18,8 @@ export default function MainLayout() {
       <AboutSection />
       <FeaturesSection />
       <ToursSection />
+      <StoriesSection />
+      <BookingSection />
     </section>
   );
 }

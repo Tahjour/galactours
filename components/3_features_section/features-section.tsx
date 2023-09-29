@@ -8,19 +8,23 @@ export default function FeaturesSection() {
         <div className={styles.feature_box}>
           <BsRocketTakeoff className={styles.feature_box_icon} />
           <h3 className={styles.heading_3}>Explore the galaxy</h3>
-          <p className={styles.feature_box_text}>
+          <p className={`${styles.paragraph} ${styles.feature_box_text}`}>
             Dive into the depths of our galaxy at speeds near the speed of light
           </p>
         </div>
         <div className={styles.feature_box}>
           <MdOutlineSocialDistance className={styles.feature_box_icon} />
           <h3 className={styles.heading_3}>Meet Alien Life</h3>
-          <p className={styles.feature_box_text}>Meet and socialize with our galactic neighbors</p>
+          <p className={`${styles.paragraph} ${styles.feature_box_text}`}>
+            Meet and socialize with our galactic neighbors
+          </p>
         </div>
         <div className={styles.feature_box}>
           <BsCompass className={styles.feature_box_icon} />
           <h3 className={styles.heading_3}>Find New Meaning</h3>
-          <p className={styles.feature_box_text}>Question the meaning of life all over again</p>
+          <p className={`${styles.paragraph} ${styles.feature_box_text}`}>
+            Question the meaning of life all over again
+          </p>
         </div>
       </div>
     </section>

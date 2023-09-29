@@ -32,6 +32,7 @@
   --color-L0-T90: hsla(0, 0%, 0%, 0.9);
   --color-L10-T50: hsla(0, 0%, 10%, 0.5);
   --color-L15-T50: hsla(0, 0%, 15%, 0.5);
+  --color-L15-T80: hsla(0, 0%, 15%, 0.8);
   --color-L25-T50: hsla(0, 0%, 25%, 0.5);
   --color-L100-T10: hsla(0, 0%, 100%, 0.1);
   --color-L100-T20: hsla(0, 0%, 100%, 0.2);
@@ -64,6 +65,13 @@
   --transition-all-medium-ease: all 0.5s ease;
   --transition-all-slow: all 0.8s;
   --transition-all-slow-ease: all 0.8s ease;
+
+  --transition-fast: 0.2s;
+  --transition-medium: 0.5s;
+  --transition-slow: 0.8s;
+  --transition-fast-ease: 0.2s ease;
+  --transition-medium-ease: 0.5s ease;
+  --transition-slow-ease: 0.8s ease;
 
   --body-padding: 0.9375rem;
   --logo-header-box-height: 4.375rem;

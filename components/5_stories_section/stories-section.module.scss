@@ -1,0 +1,17 @@
+@import "sass/base/_typography";
+@import "sass/components/_story";
+@import "sass/abstracts/_utilities";
+@import "sass/components/_bg-video";
+@import "sass/components/_button";
+
+.stories_section {
+  padding: 4vmax 0;
+  position: relative;
+}
+
+.story_grid {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  gap: 2.5vmax;
+}

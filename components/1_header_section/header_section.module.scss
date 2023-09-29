@@ -4,7 +4,7 @@
 .header_section {
   height: calc(100vh - var(--body-padding));
   background-image: linear-gradient(to right, var(--color-L10-T50), var(--color-L10-T50)),
-    url(/images/planetours-hero.jpg);
+    url(/media/planetours-hero.jpg);
   background-size: cover;
   background-position: top;
   // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
