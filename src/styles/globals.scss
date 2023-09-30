@@ -44,7 +44,7 @@
   --color-L100-T80: hsla(0, 0%, 100%, 0.8);
   --color-L100-T90: hsla(0, 0%, 100%, 0.9);
 
-  --dim-pink: #923a90;
+  --dim-pink: hsl(301, 43%, 40%);
   --dim-red: hsl(5, 84%, 69%);
   --light-blue: hsl(190, 100%, 50%);
   --medium-blue: hsl(210, 100%, 50%);
@@ -73,8 +73,8 @@
   --transition-medium-ease: 0.5s ease;
   --transition-slow-ease: 0.8s ease;
 
-  --body-padding: 0.9375rem;
-  --logo-header-box-height: 4.375rem;
+  --body-padding: 0.9375vmax;
+  --logo-header-box-height: 4.375vmax;
 
   --large-margin: 5vmax;
   --medium-margin: 2.5vmax;
@@ -99,15 +99,20 @@ html {
     font-weight: 400;
     font-size: 1vmax;
     line-height: 1.7;
-    color: white;
+    color: var(--color-L95);
     background-color: var(--color-L15);
     padding: var(--body-padding);
+    scroll-behavior: smooth;
 
     a {
       color: inherit;
       text-decoration: none;
     }
   }
+}
+
+button {
+  font-size: inherit;
 }
 
 ::-webkit-scrollbar {

@@ -2,12 +2,12 @@ import MainButton from "../UI/main_button";
 import styles from "./tours-section.module.scss";
 export default function ToursSection() {
   return (
-    <section className={styles.tours_section}>
+    <section className={styles.tours_section} id="tours_section">
       <h2 className={`${styles.heading_2} ${styles.u_medium_margin_bottom}`}>
         Our Most Popular Tours
       </h2>
       <div className={styles.tours_section_grid}>
-        <div className={styles.tour_card}>
+        <div className={styles.tour_card} tabIndex={0}>
           <div className={`${styles.tour_card_side} ${styles.tour_card_side_front}`}>
             <div className={`${styles.tour_card_image_box} ${styles.tour_card_image_box_1}`}>
               &nbsp;
@@ -44,7 +44,7 @@ export default function ToursSection() {
             </div>
           </div>
         </div>
-        <div className={styles.tour_card}>
+        <div className={styles.tour_card} tabIndex={0}>
           <div className={`${styles.tour_card_side} ${styles.tour_card_side_front}`}>
             <div className={`${styles.tour_card_image_box} ${styles.tour_card_image_box_2}`}>
               &nbsp;
@@ -81,7 +81,7 @@ export default function ToursSection() {
             </div>
           </div>
         </div>
-        <div className={styles.tour_card}>
+        <div className={styles.tour_card} tabIndex={0}>
           <div className={`${styles.tour_card_side} ${styles.tour_card_side_front}`}>
             <div className={`${styles.tour_card_image_box} ${styles.tour_card_image_box_3}`}>
               &nbsp;

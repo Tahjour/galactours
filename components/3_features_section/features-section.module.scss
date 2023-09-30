@@ -1,12 +1,10 @@
-@import "sass/base/typography";
+@import "sass/base/_typography";
 @import "sass/components/_feature_box";
+@import "sass/abstracts/_utilities";
 
 .features_section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   // margin-top: -15.625rem;
-  padding: 12.5rem 0;
+  padding: 3.125vmax 0;
   background-image: linear-gradient(to right, var(--color-L0-T50), var(--color-L0-T50)),
     url(/media/pilot-room2.jpg);
   background-size: cover;
@@ -18,5 +16,10 @@
   .features_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 31.25rem) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
   }
 }

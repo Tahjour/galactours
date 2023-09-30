@@ -1,9 +1,10 @@
-@import "sass/base/typography";
-@import "sass/components/button";
+// components\1_header_section\header_section.module.scss
+@import "sass/base/_typography";
+@import "sass/components/_button";
 
 .header_section {
   height: calc(100vh - var(--body-padding));
-  background-image: linear-gradient(to right, var(--color-L10-T50), var(--color-L10-T50)),
+  background-image: linear-gradient(to right, var(--color-L0-T50), var(--color-L10-T50)),
     url(/media/planetours-hero.jpg);
   background-size: cover;
   background-position: top;
@@ -14,22 +15,28 @@
     // position: absolute;
     // top: 2.5rem;
     // left: 2.5rem;
-    padding: .625rem 1.25rem;
-    color: white;
+    padding: 0.625vmax 1.25vmax;
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.25vmax;
     height: var(--logo-header-box-height);
 
     h1 {
-      letter-spacing: .125rem;
+      letter-spacing: 0.125vmax;
       text-transform: uppercase;
+      // background-image: linear-gradient(to right bottom, var(--dim-pink), var(--dim-red));
+      // -webkit-background-clip: text;
+      // background-clip: text;
+      // -webkit-text-fill-color: transparent;
     }
 
     &_image_box {
       width: -webkit-fit-content;
       width: -moz-fit-content;
       width: fit-content;
+      width: 3.125vmax;
+      height: 3.0625vmax;
+      position: relative;
 
       &_image {
         -o-object-fit: contain;

@@ -1,9 +1,9 @@
-.heading_1 {
-  color: white;
+// src\styles\sass\base\_typography.scss
+.heading_1_box {
   text-transform: uppercase;
   text-align: center;
 
-  .heading_1_main {
+  .heading_1_box_main {
     font-size: 4vmax;
     font-weight: 400;
     letter-spacing: 3vmax;
@@ -11,7 +11,7 @@
     text-indent: -3vmax;
   }
 
-  .heading_1_sub {
+  .heading_1_box_sub {
     font-size: 1.5vmax;
     font-weight: 700;
     letter-spacing: 1vmax;

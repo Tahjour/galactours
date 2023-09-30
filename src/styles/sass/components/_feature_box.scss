@@ -5,16 +5,16 @@
   border-radius: 1vmax;
   box-shadow: 0 0.9375vmax 2.5vmax var(--color-L0-T50);
   transition: var(--transition-all-fast);
-  margin: 1.25rem;
+  margin: 1.25vmax;
   cursor: pointer;
 
   &:hover {
-    transform: translateY(-0.625rem) scale(1.05);
+    transform: translateY(-0.625vmax) scale(1.05);
   }
 
   &_icon {
-    font-size: 3.75rem;
-    margin-bottom: 0.3125rem;
+    font-size: 3.75vmax;
+    margin-bottom: 0.3125vmax;
     color: var(--dim-pink);
     // background-color: var(--dim-pink);
     // -webkit-text-fill-color: transparent;

@@ -36,7 +36,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className={styles.about_section}>
+    <section className={styles.about_section} id="about_section">
       <h2 className={styles.heading_2} style={{ marginBottom: "2rem" }}>
         Thrilling tours around the milky way
       </h2>

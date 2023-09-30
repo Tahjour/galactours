@@ -1,0 +1,147 @@
+// components\00_main-navigation\main-navigation.module.scss
+.main_navigation {
+  &_checkbox {
+    display: none;
+  }
+
+  &_button {
+    background-color: var(--color-L20);
+    height: 4.375vmax;
+    width: 4.375vmax;
+    border-radius: 50%;
+    position: fixed;
+    top: 1.25vmax;
+    right: 3.75vmax;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 0.625vmax 1.875vmax var(--color-L0-T20);
+    text-align: center;
+  }
+
+  &_background {
+    height: 3.75vmax;
+    width: 3.75vmax;
+    border-radius: 50%;
+    position: fixed;
+    top: 1.5625vmax;
+    right: 4.0625vmax;
+    background-image: radial-gradient(var(--dim-pink), var(--dim-red));
+    z-index: 998;
+    transition: transform var(--transition-medium);
+  }
+
+  &_nav_box {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: var(--transition-all-fast) cubic-bezier(1,-0.18,0,1.14);
+  }
+
+  &_list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    list-style: none;
+    text-align: center;
+  }
+
+  &_list_item {
+    margin: 3.125vmax 0;
+    width: 100%;
+  }
+
+  &_list_button {
+    font-size: 3vmax;
+    font-weight: 300;
+    padding: 1vmax 2vmax;
+    color: var(--color-L100);
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0.625vmax;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      var(--color-L20) 50%
+    );
+    background-size: 220%;
+    transition: var(--transition-all-fast);
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      background-position: 100%;
+      color: var(--dim-pink);
+      transform: translateX(1vmax);
+    }
+  }
+
+  &_checkbox:checked ~ &_background {
+    transform: scale(80);
+  }
+
+  &_checkbox:checked ~ &_nav_box {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  //Icon part
+  &_icon {
+    position: relative;
+    margin-top: 2.1vmax;
+    &,
+    &::before,
+    &::after {
+      width: 1.875vmax;
+      height: 0.125vmax;
+      background-color: var(--color-L95);
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: var(--transition-all-fast);
+    }
+
+    &::before {
+      top: -0.5vmax;
+    }
+    &::after {
+      top: 0.5vmax;
+    }
+  }
+
+  &_button:hover &_icon::before {
+    top: -0.7vmax;
+  }
+  &_button:hover &_icon::after {
+    top: 0.7vmax;
+  }
+
+  &_checkbox:checked ~ &_button &_icon {
+    background-color: transparent;
+  }
+
+  &_checkbox:checked ~ &_button &_icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &_checkbox:checked ~ &_button &_icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

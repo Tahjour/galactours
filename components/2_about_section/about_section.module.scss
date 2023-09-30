@@ -9,12 +9,22 @@
 
   .grid_box {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+
+    @media screen and (max-width: 42.5rem) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+    }
 
     div {
       //   background-color: var(--medium-blue);
-      padding: 2.5vmax 2.5vmax 0;
+      position: relative;
+      padding: 2.5vmax;
+    }
+
+    .info_box {
+      text-align: center;
     }
   }
 }

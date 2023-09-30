@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import styles from "./main-button.module.scss";
 import { useState } from "react";
+import { selectSectionAndScroll } from "./smooth-scrolling/select-section-and-scroll";
 
 export default function MainButton({
   message,
@@ -15,7 +16,9 @@ export default function MainButton({
   return (
     <motion.button
       className={`${styles.main_button} ${styles.button_white} ${
-        type_class === "button_all_tours" ? styles["button_all_tours"] : ""
+        type_class === "button_welcome" ? styles["button_welcome"] : ""
+      } ${type_class === "button_all_tours" ? styles["button_all_tours"] : ""} ${
+        type_class === "button_booking" ? styles["button_booking"] : ""
       }`}
       // initial={location === "header_section" ? { opacity: 0, y: 10 } : {}}
       initial={{ opacity: 0, y: 10 }}
@@ -27,9 +30,14 @@ export default function MainButton({
       }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      whileHover={{ y: "-3px", transition: { y: { duration: 0.1 } } }}
-      whileFocus={{ y: "-3px", transition: { y: { duration: 0.1 } } }}
-      whileTap={{ y: "-1px", transition: { y: { duration: 0.1 } } }}
+      whileHover={{ y: "-0.1875vmax", transition: { y: { duration: 0.1 } } }}
+      whileFocus={{ y: "-0.1875vmax", transition: { y: { duration: 0.1 } } }}
+      whileTap={{ y: "-0.0625vmax", transition: { y: { duration: 0.1 } } }}
+      onClick={() => {
+        location === "header_section" &&
+          type_class === "button_welcome" &&
+          selectSectionAndScroll("tours_section");
+      }}
     >
       {message}
     </motion.button>

@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./stories-section.module.scss";
 export default function StoriesSection() {
   return (
-    <section className={styles.stories_section}>
+    <section className={styles.stories_section} id="stories_section">
       <div className={styles.stories_section_bg_box}>
         <video className={styles.stories_section_bg_box_video} autoPlay loop muted>
           <source src="/media/tunnel-video.mp4" type="video/mp4" />

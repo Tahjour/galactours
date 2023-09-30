@@ -58,4 +58,17 @@ $shape_box_translate_x: $story_box_padding - $story_box_left_padding;
   &_text_box {
     transform: skewX(12deg);
   }
+
+  @media screen and (max-width: 37.5rem) {
+    width: 90%;
+    transform: skewX(0deg);
+
+    &_shape_box {
+      transform: translateX($shape_box_translate_x) skewX(0deg);
+    }
+
+    &_text_box {
+      transform: skewX(0deg);
+    }
+  }
 }

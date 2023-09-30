@@ -3,10 +3,11 @@
 $tour-card-height: 33vmax;
 
 .tour_card {
-  perspective: 93.75rem;
+  perspective: 93.75vmax;
   position: relative;
   height: $tour-card-height;
   cursor: pointer;
+  outline: 0;
 
   &_side {
     position: absolute;
@@ -45,13 +46,13 @@ $tour-card-height: 33vmax;
     }
   }
 
-  &:hover &_side {
+  &:hover &_side, &:focus &_side {
     &_front {
       transform: rotateY(-180deg);
     }
   }
 
-  &:hover &_side {
+  &:hover &_side, &:focus &_side {
     &_back {
       transform: rotateY(0deg);
       opacity: 1;
@@ -83,7 +84,7 @@ $tour-card-height: 33vmax;
     color: var(--color-L100);
     position: absolute;
     top: 13vmax;
-    right: 1.25rem;
+    right: 1.25vmax;
     text-align: right;
   }
   &_heading_span {

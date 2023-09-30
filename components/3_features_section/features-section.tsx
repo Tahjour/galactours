@@ -3,7 +3,8 @@ import { MdOutlineSocialDistance } from "react-icons/md";
 import styles from "./features-section.module.scss";
 export default function FeaturesSection() {
   return (
-    <section className={styles.features_section}>
+    <section className={styles.features_section} id="features_section">
+      <h2 className={`${styles.heading_2} ${styles.u_medium_margin_bottom}`}>{"Why It's Worth It"}</h2>
       <div className={styles.features_grid}>
         <div className={styles.feature_box}>
           <BsRocketTakeoff className={styles.feature_box_icon} />

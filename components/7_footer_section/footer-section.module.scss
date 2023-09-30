@@ -1,0 +1,101 @@
+@import "sass/base/_typography";
+
+.footer_section {
+  background-color: var(--color-L5);
+  padding: 6.25vmax;
+  .footer_logo_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.125vmax;
+    .footer_logo_image_box {
+      position: relative;
+      width: 6.25vmax;
+      height: 6.125vmax;
+    }
+
+    .footer_logo_name {
+      font-size: 2.5vmax;
+      color: var(--dim-pink);
+      //   background-image: linear-gradient(to right bottom, var(--dim-pink), var(--dim-red));
+      //   -webkit-background-clip: text;
+      //   background-clip: text;
+      //   -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .footer_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .footer_nav_box {
+      .footer_nav_list {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        list-style: none;
+        display: flex;
+        gap: 1.25vmax;
+        border-top: 0.125vmax solid var(--color-L20);
+        padding-top: 1.25vmax;
+
+        .footer_nav_list_item {
+          .footer_nav_button {
+            background-color: transparent;
+            padding: 0.3125vmax;
+            border-radius: 0.3125vmax;
+            border: none;
+            color: var(--color-L100);
+            cursor: pointer;
+            transition: var(--transition-all-fast);
+
+            &:hover,
+            &:focus {
+              outline: 0;
+              color: var(--dim-pink);
+              box-shadow: 0 0 1.25rem var(--dim-pink);
+              //   transform: rotate(5deg) scale(1.1);
+            }
+          }
+        }
+      }
+    }
+
+    .footer_copyright_text {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      border-top: 0.125vmax solid var(--color-L20);
+      padding-top: 1.25vmax;
+
+      a {
+        color: var(--dim-pink);
+        padding: 0.3125vmax;
+        border-radius: 0.3125vmax;
+
+        &:hover,
+        &:focus {
+          outline: 0;
+          box-shadow: 0 0 1.25rem var(--dim-pink);
+          //   transform: rotate(5deg) scale(1.1);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 37.5rem) {
+    .footer_grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+
+      .footer_nav_box {
+        .footer_nav_list {
+          border: 0;
+        }
+      }
+      .footer_copyright_text {
+        border: 0;
+      }
+    }
+  }
+}

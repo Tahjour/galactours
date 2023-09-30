@@ -2,22 +2,29 @@
 .images_composition_box {
   position: relative;
   width: 100%;
-  padding: 2.5rem;
+  height: 100%;
+  padding: 2.5vmax;
 
   .composition_image {
-    width: 50%;
+    width: 25vmax;
     height: auto;
     box-shadow: 0 0.9375vmax 2.5vmax var(--color-L0-T90);
     border-radius: 0.3125vmax;
-    position: relative;
+    position: absolute;
     cursor: pointer;
     z-index: 1;
-    outline-offset: 0.625vmax;
+    // outline-offset: 0.625vmax;
     transition: var(--transition-all-fast);
+
+    &.active {
+      outline: 0.625vmax solid var(--dim-pink);
+      box-shadow: 0 1.5625vmax 2.5vmax var(--color-L0-T50);
+      z-index: 10;
+    }
 
     &.image_1 {
       // top: -1.25rem;
-      left: 0;
+      left: 5%;
       transition-property: left, z-index, transform;
       transition-duration: var(--transition-fast), 0s, var(--transition-fast);
       transition-delay: var(--transition-fast), var(--transition-fast), 0s;
@@ -26,93 +33,56 @@
       &.active {
         // The delays here are moving forward, not backward.
         transition-delay: 0s, var(--transition-fast), var(--transition-fast);
-        left: -35%;
+        left: -30%;
         transform: translateX(70%) scale(1.1);
       }
     }
     &.image_2 {
-      right: 10%;
-      top: 5%;
+      right: 5%;
+      top: 15%;
       transition-property: right, z-index, transform;
       transition-duration: var(--transition-fast), 0s, var(--transition-fast);
       transition-delay: var(--transition-fast), var(--transition-fast), 0s;
 
       &.active {
         transition-delay: 0s, var(--transition-fast), var(--transition-fast);
-        right: -25%;
+        right: -30%;
         transform: translateX(-70%) scale(1.1);
       }
     }
     &.image_3 {
-      left: 20%;
-      top: -30%;
+      left: 25%;
+      top: 25%;
 
       &.active {
         transform: scale(1.1);
       }
     }
+  }
 
-    &.active {
-      outline: 0.625vmax solid var(--dim-pink);
-      box-shadow: 0 1.5625vmax 2.5vmax var(--color-L0-T50);
-      z-index: 10;
-    }
+  @media screen and (max-width: 42.5rem) {
+    // display: grid;
+    // gap: 1.875vmax;
+    // grid-template-columns: repeat(auto-fit, 1fr);
+    // justify-items: center;
+    // align-items: center;
 
-    // &:hover {
-    //   transition-delay:
-    //     z-index var(--transition-fast),
-    //     transform 0s;
-    //   outline: 0.625vmax solid var(--dim-pink);
-    //   transform: translateX(-100%) scale(1.1);
-    //   // transform: scale(1.1);
-    //   box-shadow: 0 1.5625vmax 2.5vmax var(--color-L0-T50);
-    //   z-index: 20;
+    // .composition_image {
+    //   width: 30vmax;
+    //   position: relative;
+
+    //   &.image_1 {
+    //     left: 0;
+    //   }
+    //   &.image_2 {
+    //     right: 0;
+    //     top: 0;
+    //   }
+    //   &.image_3 {
+    //     left: 0;
+    //     top: 0;
+    //   }
     // }
-
-    // &:not(:hover) {
-    //   transform: scale(0.9);
-    // }
-  }
-}
-
-@keyframes image1Movement {
-  0% {
-    transform: translateX(0);
-  }
-  33% {
-    transform: translateX(-100%);
-  }
-  66%,
-  100% {
-    z-index: 20;
-    transform: translateX(0) scale(1.1);
-  }
-}
-
-@keyframes image2Movement {
-  0% {
-    transform: translateX(0);
-  }
-  33% {
-    transform: translateX(-70%);
-  }
-  66%,
-  100% {
-    z-index: 20;
-    transform: translateX(0) scale(1.1);
-  }
-}
-
-@keyframes image3Movement {
-  0% {
-    transform: translateX(0);
-  }
-  33% {
-    transform: translateX(-100%);
-  }
-  66%,
-  100% {
-    z-index: 20;
-    transform: translateX(0) scale(1.1);
+    display: none;
   }
 }

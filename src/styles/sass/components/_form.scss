@@ -1,8 +1,11 @@
 .form {
-  &_group:not(:last-child) {
-    margin-bottom: 1.5vmax;
-  }
+  // &_group:not(:last-child) {
+  //   margin-bottom: 1vmax;
+  // }
 
+  &_group {
+    margin-bottom: 1.25vmax;
+  }
   &_input {
     font-size: 1vmax;
     font-family: inherit;
@@ -25,11 +28,85 @@
       border-bottom: 0.1875vmax solid var(--light-blue);
     }
 
+    &:focus:invalid {
+      border-bottom: 0.1875vmax solid var(--light-red);
+    }
+
     &:-webkit-autofill {
       -webkit-text-fill-color: var(--color-L100);
       box-shadow: 0 0 0 62.5rem var(--color-L25) inset;
       caret-color: var(--color-L100);
       /* Above is a hack to stop the background color from when the user autofills saved input */
+    }
+  }
+
+  &_label {
+    font-size: 0.9vmax;
+    font-weight: 700;
+    margin-left: 1.5vmax;
+    margin-top: 0.2vmax;
+    display: block;
+    transition: var(--transition-all-fast);
+  }
+
+  &_input:placeholder-shown + &_label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2vmax);
+  }
+
+  &_radio_group {
+    display: inline-block;
+    width: 33%;
+  }
+
+  &_radio_input {
+    display: none;
+  }
+
+  &_radio_label {
+    position: relative;
+    font: 1vmax;
+    cursor: pointer;
+    padding-left: 3.125vmax;
+  }
+
+  &_radio_button {
+    height: 1.875vmax;
+    width: 1.875vmax;
+    border: 0.3125vmax solid var(--dim-pink);
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -0.45vmax;
+    transition: var(--transition-all-fast);
+
+    &::after {
+      content: "";
+      height: 0.625vmax;
+      width: 0.625vmax;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--dim-pink);
+      opacity: 0;
+    }
+  }
+
+  &_radio_input:checked + &_radio_label &_radio_button::after {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 37.5rem) {
+    text-align: center;
+    &_heading {
+      text-align: center;
+    }
+    &_input {
+      width: 100%;
     }
   }
 }
