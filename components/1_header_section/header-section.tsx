@@ -20,7 +20,7 @@ export default function HeaderSection() {
         }}
         initial="hidden"
         animate="visible"
-        transition={{ duration: 0.2, delay: 0.2 }}
+        transition={{ duration: 0.2 }}
       >
         <div className={styles.header_section_logo_box_image_box}>
           <Image
@@ -49,7 +49,7 @@ export default function HeaderSection() {
               }}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.2, delay: 0.2 }}
+              transition={{ duration: 0.2 }}
             >
               Galaxies
             </motion.div>
@@ -67,7 +67,7 @@ export default function HeaderSection() {
               }}
               initial="hidden"
               animate="visible"
-              transition={{ duration: 0.2, delay: 0.2 }}
+              transition={{ duration: 0.2 }}
             >
               are meant to be explored
             </motion.div>
