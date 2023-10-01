@@ -8,10 +8,18 @@ export default function HeaderSection() {
     <header className={styles.header_section} id="header_section">
       <motion.div
         className={styles.header_section_logo_box}
-        animate={{
-          opacity: [0, 1],
-          x: [100, 0],
+        variants={{
+          hidden: {
+            opacity: 0,
+            x: 100,
+          },
+          visible: {
+            opacity: 1,
+            x: 0,
+          },
         }}
+        initial="hidden"
+        animate="visible"
         transition={{ duration: 0.2, delay: 0.2 }}
       >
         <div className={styles.header_section_logo_box_image_box}>
@@ -30,23 +38,35 @@ export default function HeaderSection() {
             <motion.div
               className={styles.heading_1_box_main}
               variants={{
+                hidden: {
+                  opacity: 0,
+                  x: 100,
+                },
                 visible: {
-                  opacity: [0, 1],
-                  x: [-100, 0],
+                  opacity: 1,
+                  x: 0,
                 },
               }}
-              transition={{ duration: 0.2, delay: 0.2 }}
-              // initial="hidden"
+              initial="hidden"
               animate="visible"
+              transition={{ duration: 0.2, delay: 0.2 }}
             >
               Galaxies
             </motion.div>
             <motion.div
               className={styles.heading_1_box_sub}
-              animate={{
-                opacity: [0, 1],
-                x: [100, 0],
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: -100,
+                },
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                },
               }}
+              initial="hidden"
+              animate="visible"
               transition={{ duration: 0.2, delay: 0.2 }}
             >
               are meant to be explored
