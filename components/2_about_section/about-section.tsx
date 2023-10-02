@@ -63,7 +63,7 @@ export default function AboutSection() {
             className={`${styles.composition_image} ${styles.image_1} ${
               activeImage === 1 ? styles.active : ""
             }`}
-            src="/media/massive-spaceship.jpg"
+            src="/media/group-looking.jpg"
             alt="Image of light speed travel"
             width={1152}
             height={768}
@@ -75,7 +75,7 @@ export default function AboutSection() {
             className={`${styles.composition_image} ${styles.image_2} ${
               activeImage === 2 ? styles.active : ""
             }`}
-            src="/media/cluster-of-planets1.jpg"
+            src="/media/group3.jpg"
             alt="A cluster of planets"
             width={1152}
             height={768}

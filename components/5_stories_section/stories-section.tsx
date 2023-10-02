@@ -18,7 +18,7 @@ export default function StoriesSection() {
           <figure className={styles.story_box_shape_box}>
             <Image
               className={styles.story_box_shape_box_image}
-              src="/media/girl-stare.jpg"
+              src="/media/woman-stare2.jpg"
               alt="shape"
               fill
             />
