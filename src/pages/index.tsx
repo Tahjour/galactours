@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Fragment>
       <Head>
-        <title>Planetours</title>
+        <title>Galactours</title>
         <meta name="description" content="The best tours around the milky way" />
       </Head>
       <MainLayout />

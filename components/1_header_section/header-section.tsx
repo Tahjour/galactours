@@ -26,7 +26,7 @@ export default function HeaderSection() {
           <Image
             className={styles.header_section_logo_box_image_box_image}
             src="/media/logo-white.png"
-            alt="Planetours logo"
+            alt="Galactours logo"
             fill
           />
         </div>

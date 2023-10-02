@@ -9,7 +9,7 @@ export default function FooterSection() {
           <Image
             className={styles.footer_logo_image}
             src="/media/logo-pink.png"
-            alt="Planetours logo"
+            alt="Galactours logo"
             fill
           />
         </div>
